@@ -1,12 +1,8 @@
-package com.coder.springboot.web;
+package com.coder.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author changjunjie
- * @since 28.08.2017
- */
 @RestController
 public class indexController {
 
