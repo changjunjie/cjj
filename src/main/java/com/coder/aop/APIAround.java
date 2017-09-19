@@ -54,6 +54,7 @@ public class APIAround {
                 return getErrorResponse((MethodSignature) jp.getSignature(), ErrorConstants.UPDATE_COUNT_ZERO.getCode
                         (), ErrorConstants.UPDATE_COUNT_ZERO.getDesc(), jp.getTarget().getClass());
             }
+            LOGGER.error("error happen=>", e);
 
             return getErrorResponse((MethodSignature) jp.getSignature(), ErrorConstants.UNKNOWN_ERROR.getCode(),
                     ErrorConstants.UNKNOWN_ERROR.getDesc(), jp.getTarget().getClass());

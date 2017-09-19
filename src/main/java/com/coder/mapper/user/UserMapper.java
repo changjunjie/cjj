@@ -1,10 +1,15 @@
-package com.coder.mapper.base;
+package com.coder.mapper.user;
 
+import com.coder.entity.User;
 import java.util.List;
 import java.util.Map;
 import org.apache.ibatis.session.RowBounds;
 
-public interface IBaseMapper {
+public interface UserMapper {
+
+    //    @OptimisticLock(expect = 1)
+    int updateSelective(User user);
+
 
     /**
      * 插入记录

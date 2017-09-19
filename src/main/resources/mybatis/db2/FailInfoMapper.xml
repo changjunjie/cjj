@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.coder.mapper.retry.FailInfoMapper">
+    <resultMap id="baseResultMap" type="com.coder.retry.model.FailInfo">
+        <id property="id" column="ID"/>
+        <result property="className" column="CLASS_NAME"/>
+        <result property="method" column="METHOD"/>
+        <result property="params" column="PARAMS"/>
+        <result property="exception" column="EXCEPTION"/>
+        <result property="created" column="CREATED"/>
+        <result property="modified" column="MODIFIED"/>
+    </resultMap>
+
+    <sql id="insertSql">
+        CLASS_NAME, METHOD, PARAMS, EXCEPTION, CREATED, MODIFIED
+    </sql>
+
+    <insert id="insert" parameterType="com.coder.retry.model.FailInfo">
+        INSERT INTO FAIL_INFO(<include refid="insertSql"/>)
+        VALUES (#{className}, #{method}, #{params}, #{exception}, #{created}, #{modified})
+    </insert>
+</mapper>

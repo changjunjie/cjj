@@ -1,8 +1,7 @@
 package com.coder.service.impl;
 
 import com.coder.entity.User;
-import com.coder.mapper.UserMapper;
-import com.coder.retry.Retry;
+import com.coder.mapper.user.UserMapper;
 import com.coder.service.IUserService;
 import java.util.List;
 import javax.annotation.Resource;
@@ -24,7 +23,6 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    @Retry(maxTimes = 3)
     public List<User> select(User arg) {
         return userMapper.select(arg);
 

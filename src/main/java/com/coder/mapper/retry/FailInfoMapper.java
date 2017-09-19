@@ -1,4 +1,4 @@
-package com.coder.retry.mapper;
+package com.coder.mapper.retry;
 
 import com.coder.retry.model.FailInfo;
 

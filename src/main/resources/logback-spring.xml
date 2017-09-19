@@ -28,8 +28,8 @@
         </rollingPolicy>
     </appender>
 
-    <logger name="org.springframework" level="warn"/>
-    <logger name="com.coder" level="debug"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="com.coder" level="INFO"/>
 
     <logger name="root">
         <level value="ERROR"/>

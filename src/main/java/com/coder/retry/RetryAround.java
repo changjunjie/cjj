@@ -1,7 +1,7 @@
 package com.coder.retry;
 
 import com.coder.retry.model.FailInfo;
-import com.coder.retry.mapper.FailInfoMapper;
+import com.coder.mapper.retry.FailInfoMapper;
 import com.coder.retry.model.RetryContext;
 import com.coder.utils.JsonUtils;
 import java.lang.reflect.Method;

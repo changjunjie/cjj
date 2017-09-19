@@ -1,0 +1,75 @@
+#mybatis.type-aliases-package: com.coder.springboot.entity
+#mybatis.config-locations: classpath:mybatis/mybatis-config.xml
+#mybatis.mapper-locations: classpath:mybatis/sqlmapper/*.xml
+spring:
+  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/sample?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+    #初始化连接数量
+    initialSize: 20
+    #最大并发连接数
+    maxActive: 100
+    #最小空闲连接数
+    minIdle: 20
+    #配置获取连接等待超时的时间
+    maxWait: 60000
+    #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    #用来检测连接是否有效的sql，要求是一个查询语句
+    validationQuery: SELECT 1
+    #申请连接的时候检测
+    testWhileIdle: true
+    #申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+    testOnBorrow: false
+    #归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+    testOnReturn: false
+    #打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 50
+    #属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有：
+    #监控统计用的filter:stat
+    #日志用的filter:log4j
+    #防御SQL注入的filter:wall
+    filters: stat
+
+  datasource1:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sample?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    initialSize: 20
+    minIdle: 20
+    maxActive: 100
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 50
+    filters: stat
+
+  datasource2:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring4_mybatis3?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    initialSize: 20
+    minIdle: 20
+    maxActive: 100
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 50
+    filters: stat
